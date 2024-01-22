@@ -18,6 +18,7 @@ namespace LR2
             Application.SetCompatibleTextRenderingDefault(false);
             MainPresenter mainPresenter = new MainPresenter(new Form1(), new MainModel());
             mainPresenter.Run();
+            
         }
     }
 }

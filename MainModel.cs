@@ -8,5 +8,6 @@ namespace LR2
 {
      class MainModel : IMainModel
     {
+
     }
 }

@@ -19,6 +19,8 @@ namespace LR2
         public void Run()
         {
             _view.Show();
+          
+        
         }
     }
 }
