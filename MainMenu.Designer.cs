@@ -1,6 +1,6 @@
 ﻿namespace LR2
 {
-    partial class Form1
+    partial class MainMenu
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -46,6 +46,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Открыть численность населения";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.ShowPopulationStats);
             // 
             // button2
             // 
@@ -93,7 +94,7 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Данные";
             // 
-            // Form1
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -104,7 +105,7 @@
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "MainMenu";
             this.Text = "Статистика";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

@@ -16,7 +16,7 @@ namespace LR2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            MainPresenter mainPresenter = new MainPresenter(new Form1(), new MainModel());
+            MainPresenter mainPresenter = new MainPresenter(new MainMenu(), new MainModel());
             mainPresenter.Run();
             
         }

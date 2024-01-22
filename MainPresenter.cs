@@ -10,17 +10,25 @@ namespace LR2
     {
         private readonly IMainView _view;
         private readonly IMainModel _model;
+        
 
         public MainPresenter(IMainView view, IMainModel model)
         {
             _view = view;
             _model = model;
+            _view.ShowedPopulationStats += ShowPopulationStats;
         }
         public void Run()
         {
             _view.Show();
           
         
+        }
+        private void ShowPopulationStats()
+        {
+            
+            string[][] data = _model.GetData("dataNaselenie.csv");
+            
         }
     }
 }

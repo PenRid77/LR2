@@ -8,5 +8,6 @@ namespace LR2
 {
     interface IMainModel
     {
+        string[][] GetData(string filePath);
     }
 }
