@@ -48,6 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CSVReader.cs" />
+    <Compile Include="DataConverter.cs" />
+    <Compile Include="Dot.cs" />
+    <Compile Include="GraphicCalculactor.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>

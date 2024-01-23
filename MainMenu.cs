@@ -24,15 +24,19 @@ namespace LR2
         {
             Application.Run(this);
         }
-        public void DrawData(string[][] data)
+        public void DrawData(List<List<string>> data)
         {
-            float[][] dataFloat; 
-            Dot[] dots = GraphicCalculactor.CalculateGraphicDots(dataFloat);
+           
+            
+            
+          
         }
-        private void DrawGraphic(Dot[] dots)
+        public void DrawGraphic(Dot[] dots)
         {
+            this.chart1.Series[0].Points.Clear();
             for (int i = 0; i < dots.Length; i++) {
                 chart1.Series[0].Points.AddXY(dots[i].X, dots[i].Y);
+                Console.WriteLine(dots[i].X.ToString());
             }
             
         }

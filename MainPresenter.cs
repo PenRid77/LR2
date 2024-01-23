@@ -26,9 +26,10 @@ namespace LR2
         }
         private void ShowPopulationStats()
         {
-            
-            string[][] data = _model.GetData("dataNaselenie.csv");
-            
+
+            List<List<string>> data = _model.GetData("dataNaselenie.csv");
+            _view.DrawData(data);
+            _view.DrawGraphic(GraphicCalculactor.CalculateGraphicDots(DataConverter.ConvertStringToFloat(data)));
         }
     }
 }

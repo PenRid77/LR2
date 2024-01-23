@@ -10,9 +10,9 @@ namespace LR2
 {
      static class CSVReader
     {
-        static public string[][] GetDataCSV(string filePath)
+        static public List<List<string>> GetDataCSV(string filePath)
         {
-            List<string[]> data = new List<string[]>();
+            List<List<string>> data = new List<List<string>>();
             using (StreamReader reader = new StreamReader(filePath, Encoding.Default))
             {
                 string headerLine = reader.ReadLine();
@@ -21,13 +21,13 @@ namespace LR2
                 {
                     string line = reader.ReadLine();
                     string[] values = line.Split(';');
-                    data.Add(values);
+                    data.Add(values.ToList<string>());
 
                 }
                 
             }
             
-            return data.ToArray();
+            return data;
         }
     }
 }
