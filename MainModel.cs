@@ -11,11 +11,12 @@ namespace LR2
      class MainModel : IMainModel
     {
 
-        public string[][] GetData(string filePath)
+        public List<List<string>> GetData(string filePath)
         {
             string dataPath = "..\\..\\Data\\" + filePath;
-            string[][] data = CSVReader.GetDataCSV(dataPath);
-            return data;
+            List<List<string>> dataString = CSVReader.GetDataCSV(dataPath);
+            
+            return dataString;
         }
 
     }

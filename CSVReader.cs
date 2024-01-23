@@ -10,24 +10,25 @@ namespace LR2
 {
      static class CSVReader
     {
-        static public string[][] GetDataCSV(string filePath)
+        static public List<List<string>> GetDataCSV(string filePath)
         {
-            List<string[]> data = new List<string[]>();
+            List<List<string>> data = new List<List<string>>();
             using (StreamReader reader = new StreamReader(filePath, Encoding.Default))
             {
                 string headerLine = reader.ReadLine();
                 string[] headers = headerLine.Split(';');
+                data.Add(headers.ToList<string>());
                 while (!reader.EndOfStream)
                 {
                     string line = reader.ReadLine();
                     string[] values = line.Split(';');
-                    data.Add(values);
+                    data.Add(values.ToList<string>());
 
                 }
                 
             }
             
-            return data.ToArray();
+            return data;
         }
     }
 }

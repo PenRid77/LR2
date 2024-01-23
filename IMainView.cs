@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace LR2
 {
-     interface IMainView : IView
+    public interface IMainView : IView
     {
         event Action ShowedPopulationStats;
-        void DrawData(string[][] data);
-
+        void DrawData(List<List<string>> data);
+        void DrawGraphic(Dot[] dots);
 
     }
 }

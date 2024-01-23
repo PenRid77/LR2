@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LR2
 {
-    interface IView
+   public interface IView
     {
         void Show();
 

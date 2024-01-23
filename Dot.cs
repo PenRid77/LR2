@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LR2
 {
-     class Dot
+    public class Dot
     {
         public Dot(float x, float y)
         {
