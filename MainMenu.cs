@@ -41,6 +41,7 @@ namespace LR2
             foreach (var item in listViewItems)
             {
                 listView1.Items.Add(item);
+           
             }
 
 
