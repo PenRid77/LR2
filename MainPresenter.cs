@@ -29,6 +29,7 @@ namespace LR2
 
             List<List<string>> data = _model.GetData("dataNaselenie.csv");
             _view.DrawData(data);
+            _view.ClearGraphic();
             _view.DrawGraphic(GraphicCalculactor.CalculateGraphicDots(DataConverter.ConvertStringToFloat(data)));
         }
     }

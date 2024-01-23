@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace LR2
 {
@@ -46,12 +47,19 @@ namespace LR2
         }
         public void DrawGraphic(Dot[] dots)
         {
+           Series series = new Series();
+            series.ChartType = SeriesChartType.Line;
+            chart1.Series.Add(series);
             for (int i = 0; i < dots.Length; i++)
             {
                 chart1.Series[0].Points.AddXY(dots[i].X, dots[i].Y);
 
             }
 
+        }
+        public void ClearGraphic()
+        {
+            chart1.Series.Clear();
         }
         private void Form1_Load(object sender, EventArgs e)
         {

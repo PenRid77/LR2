@@ -11,6 +11,7 @@ namespace LR2
         event Action ShowedPopulationStats;
         void DrawData(List<List<string>> data);
         void DrawGraphic(Dot[] dots);
+        void ClearGraphic();
 
     }
 }
